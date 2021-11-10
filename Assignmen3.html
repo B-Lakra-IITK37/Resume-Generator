@@ -1,0 +1,241 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="Assignmen3.css"/>
+    </head>
+    <body>
+        <div class="homepage">
+            <h1><div class="header">
+                <div class="logo"></div>
+                <div class="menu"></div>
+                <div class="heading">My Resume Generator</div>
+            </h1></div>
+            <div class="content">
+                <div class="left">
+                    <div class="inputHeading">Input your details</div>
+                    <div class="inputForm">
+                        <div class="formProgress">
+                            <button><div class="personal" >Personal</div></button> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                            <button><div class="education">Education</div></button>
+                        </div>
+                        <div class="formElement">
+                            <form class="personalForm" name='registration' onSubmit="return formValidation();">  
+                                <ul>  
+                                    <li><label id="iamUnique" class="helloWorld oneMoreClass" for="userid">User id:</label></li>  
+                    <li><input type="text" name="userid" size="12" /></li>  
+
+                    <li><label for="passid">Password:</label></li>  
+                    <li><input type="password" name="passid" size="12" id="password"/></li> 
+                    <span>
+                        <input type="checkbox" id="eye" onclick="toggle()"></input>
+                    </span> 
+                    <script>
+                        var state= false;
+                        function toggle(){
+                            if(state){
+                                document.getElementById("password").setAttribute("type","password");
+                                state= false;
+                            }
+                            else{
+                                document.getElementById("password").setAttribute("type","text");
+                                state= true;
+                            }
+                        }
+                    </script>
+                    <li><label class="helloWorld" for="username">Name:</label></li>  
+                    <li><input type="text" name="username" size="50" /></li> 
+
+                    <li><label class="Pnone" for="phone">Phone No.</label></li>  
+                    <li><input type="number" name="phone" size="15" /></li> 
+
+                    <li><label for="email">Email:</label></li>  
+                    <li><input type="email" name="email" size="50" /></li>
+
+                    <li><label class="linkedIn" for="linkedIn">LinkedIn id:</label></li>  
+                    <li><input type="text" name="linkedIn" size="50" /></li> 
+
+                    <li><label class="github" for="github">Githun id:</label></li>  
+                    <li><input type="text" name="github" size="50" /></li> 
+
+                    <li><label for="address">Address:</label></li>  
+                    <li><input type="text" name="address" size="50" /></li>
+
+                    <li><label for="country">Country:</label></li>  
+                    <li>
+                        <select name="country">  
+                            <option selected="" value="Default">(Please select a country)</option>  
+                            <option value="AF">Australia</option>  
+                            <option value="AL">Canada</option>  
+                            <option value="DZ">India</option>  
+                            <option value="AS">Russia</option>  
+                            <option value="AD">USA</option>  
+                        </select>
+                    </li>  
+
+                    <li><label for="zip">ZIP Code:</label></li>  
+                    <li><input type="number" name="zip" /></li>  
+                      
+                    <li><label id="gender">Sex:</label></li>  
+                    <li><input type="radio" name="sex" value="Male"/><span>Male</span></li>  
+
+                    <li><input type="radio" name="sex" value="Female" /><span>Female</span></li>  
+                    <li><label>Language:</label></li>  
+
+                    <li><input type="checkbox" name="en" value="en"><span>English</span></li>  
+                    <li><input type="checkbox" name="nonen" value="noen" /><span>Non English</span></li>  
+
+                    <li><label for="desc">About:</label></li>  
+                    <li><textarea name="desc" id="desc"></textarea></li> 
+                    
+                    <li><input type="submit" name="submit" value="Submit" /></li>  
+                    <li><input type="reset" name="reset" value="Reset" /></li><br><br> 
+                                </ul>  
+                            </form> 
+                            <form class="educationForm" name='educationRegistration' onSubmit="return formValidation1();">  
+                                <ul>  
+                                    <li>
+                                        <select name="college">  
+                                            <option selected="" value="Default">(Please select a country)</option>  
+                                            <option value="AF">IIT Delhi</option>  
+                                            <option value="AL">IIT Kanpur</option>  
+                                            <option value="DZ">DTU</option>  
+                                            <option value="AS">NSUT</option>  
+                                            <option value="AD">IIT BHU</option>  
+                                        </select>
+                                    </li>  
+                                    <li><input type="submit" name="submit" value="Submit" /></li>  
+                                </ul>  
+                            </form> 
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="inputHeading">Resume Preview</div>
+                    <div class="templateRender">
+                        <div class="templateNames"></div>
+                        <div class="templateContent">
+                            <div class="template1">
+                                <div id="container">
+                                    <div class="right">
+                                        <img src="imgAvatar.png">
+                                        <h2>CONTACT ME</h2>
+                                        <div class="contact">
+                                            <h3>Gmail</h3>
+                                            <a href="mailto:m.bluth@example.com"></a><br>
+                                            <h3>LinkedIn</h3>
+                                            <a href="https://www.linkedin.com/in/drishti-bansal-2311491bb/"></a><br>
+                                            <h3>GitHub</h3>
+                                            <a href="https://github.com/stuck-in-a-conundrum"></a>
+                                            </br>
+                                        </div>
+                                        <div class="lang">
+                                            <h2>LANGUAGES</h2>
+                                            <label>English</label>
+                                            <progress id="file" value="0" max="100" style="margin-left: 20px;"> 32% </progress>
+                                            <br>
+                                            <label>Hindi</label>
+                                            <progress id="file" value="0" max="100" style="margin-left: 30px;"> 32% </progress>
+                                            <br>
+                                            <label>French</label>
+                                            <progress id="file" value="0" max="100" style="margin-left: 20px;"> 32% </progress>
+                                        </div>
+                            
+                                    </div>
+                                    <div class="right">
+                                        <h1 class="myName" style="text-align:left;"></h1>
+                                        <div>
+                                            <h2>ABOUT ME</h2>
+                                            <p class="aboutMe"> </p>
+                                        </div>
+                                        <div>
+                                            <h2>EDUCATION</h2>
+                                            <table>
+                                                <tr>
+                                                    <td>College</td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Class 12 </td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Class 10</td>
+                                                    <td> </td>
+                                                    <td></td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <div>
+                                            <h2>SOFTWARES</h2>
+                                            <table>
+                                                <tr>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td></td>
+                                                    </tr>
+                                            </table>
+                                        </div>
+                                        <div>
+                                            <h2>MISCELLANEOUS</h2>
+                                            <table>
+                                                <tr>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <div>
+                                            <h2>PROJECTS</h2>
+                                            <table>
+                                                <tr>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                            
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+       <div style="display: block;float: left;width: 50%;" class="formInput"> 
+            
+        </div>
+        
+        <script src="Assignmen3.js"></script>   
+    </body>
+</html>
